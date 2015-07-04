@@ -20,7 +20,7 @@ class cfgVehicles
 		class Bag_Base;
 		class I_soldier_F;
 		
-		class ST11_AOR2_Test : I_soldier_F {
+		class ST11_AOR2 : I_soldier_F {
         scope = 2;
 		side = 1;
 		identityTypes[] = {"Head_NATO", "G_NATO_default"};
@@ -28,11 +28,12 @@ class cfgVehicles
         displayName = "Uniform Test Soldier";
         uniformAccessories[] = {};
         nakedUniform = "U_BasicBody"; //class for "naked" body
-        uniformClass = "ST11_AOR2_Test_Uniform"; //the uniform item
+        uniformClass = "ST11_AOR2_Uniform"; //the uniform item
         hiddenSelections[] = {"Camo"};
-        hiddenSelectionsTextures[] = {"ST11_Uniforms\Textures\Test_AOR2_CO.paa"};        
+        hiddenSelectionsTextures[] = {"ST11_Uniforms\Textures\ST11_AOR2_co.paa"};        
     };
-	class ST11_AOR1_Test : I_soldier_F {
+	
+	class ST11_AOR1 : I_soldier_F {
         scope = 2;
 		side = 1;
 		identityTypes[] = {"Head_NATO", "G_NATO_default"};
@@ -40,10 +41,23 @@ class cfgVehicles
         displayName = "Uniform Test Soldier AOR1";
         uniformAccessories[] = {};
         nakedUniform = "U_BasicBody"; //class for "naked" body
-        uniformClass = "ST11_AOR1_Test_Uniform"; //the uniform item
+        uniformClass = "ST11_AOR1_Uniform"; //the uniform item
         hiddenSelections[] = {"Camo"};
-        hiddenSelectionsTextures[] = {"ST11_Uniforms\Textures\Test_AOR1_CO.paa"};        
+        hiddenSelectionsTextures[] = {"ST11_Uniforms\Textures\ST11_AOR1_co.paa"};        
     };	
+	
+	class ST11_NWU : I_soldier_F {
+        scope = 2;
+		side = 1;
+		identityTypes[] = {"Head_NATO", "G_NATO_default"};
+		
+        displayName = "Uniform Test Soldier";
+        uniformAccessories[] = {};
+        nakedUniform = "U_BasicBody"; //class for "naked" body
+        uniformClass = "ST11_NWU_Uniform"; //the uniform item
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"ST11_Uniforms\Textures\ST11_NWU_co.paa"};        
+    };
 		
 		class ST11_AOR1_Kitbag : Bag_Base
 		{
@@ -55,6 +69,21 @@ class cfgVehicles
 			"ST11_Uniforms\Textures\ST11_Kitbag_AOR1_CO.paa"
 		};
 		displayName="Kitbag (AOR1)";
+		scope=2;
+		maximumLoad=350;
+		passThrough=1;
+		mass=4;
+		};
+		class ST11_NWU_Kitbag : Bag_Base
+		{
+		_generalMacro="ST11_NWU_Kitbag";
+		picture="\A3\Weapons_F\ammoboxes\bags\data\ui\icon_B_C_Kitbag_rgr";
+		model="\A3\weapons_f\Ammoboxes\bags\Backpack_Fast";
+		hiddenSelectionsTextures[]=
+		{
+			"ST11_Uniforms\Textures\ST11_kitbag_NWU_co.paa"
+		};
+		displayName="Kitbag (NWU)";
 		scope=2;
 		maximumLoad=350;
 		passThrough=1;
@@ -144,29 +173,43 @@ class cfgVehicles
 	class U_I_CombatUniform;
     
 	
-    class ST11_AOR2_Test_Uniform : U_I_CombatUniform {
+    class ST11_AOR2_Uniform : U_I_CombatUniform {
         scope = 2;
-        displayName = "AOR2 Test Uniform";
+        displayName = "ST11 AOR2";
         picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
         model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
         
         class ItemInfo : UniformItem {
             uniformModel = "-";
-            uniformClass = "ST11_AOR2_Test"; //would be same as our made soldier class
+            uniformClass = "ST11_AOR2"; //would be same as our made soldier class
             containerClass = "Supply20"; //how much it can carry
             mass = 80; //how much it weights
         };
     };
 	
-	class ST11_AOR1_Test_Uniform : U_I_CombatUniform {
+	    class ST11_NWU_Uniform : U_I_CombatUniform {
         scope = 2;
-        displayName = "AOR1 Test Uniform";
+        displayName = "ST11 NWU";
         picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
         model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
         
         class ItemInfo : UniformItem {
             uniformModel = "-";
-            uniformClass = "ST11_AOR1_Test"; //would be same as our made soldier class
+            uniformClass = "ST11_NWU"; //would be same as our made soldier class
+            containerClass = "Supply20"; //how much it can carry
+            mass = 80; //how much it weights
+        };
+    };
+	
+	class ST11_AOR1_Uniform : U_I_CombatUniform {
+        scope = 2;
+        displayName = "ST11 AOR1";
+        picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
+        model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+        
+        class ItemInfo : UniformItem {
+            uniformModel = "-";
+            uniformClass = "ST11_AOR1"; //would be same as our made soldier class
             containerClass = "Supply20"; //how much it can carry
             mass = 80; //how much it weights
         };
