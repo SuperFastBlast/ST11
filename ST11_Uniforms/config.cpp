@@ -21,7 +21,7 @@ class cfgVehicles
 		class I_soldier_F;
 		
 		class ST11_AOR2 : I_soldier_F {
-        scope = 2;
+        scope = 0;
 		side = 1;
 		identityTypes[] = {"Head_NATO", "G_NATO_default"};
 		
@@ -34,7 +34,7 @@ class cfgVehicles
     };
 	
 	class ST11_AOR1 : I_soldier_F {
-        scope = 2;
+        scope = 0;
 		side = 1;
 		identityTypes[] = {"Head_NATO", "G_NATO_default"};
 		
@@ -46,7 +46,7 @@ class cfgVehicles
         hiddenSelectionsTextures[] = {"ST11_Uniforms\Textures\ST11_AOR1_co.paa"};        
     };	
 	class ST11_BDU : I_soldier_F {
-        scope = 2;
+        scope = 0;
 		side = 1;
 		identityTypes[] = {"Head_NATO", "G_NATO_default"};
 		
@@ -58,7 +58,7 @@ class cfgVehicles
         hiddenSelectionsTextures[] = {"ST11_Uniforms\Textures\ST11_BDU_co.paa"};        
     };	
 	class ST11_ACU : I_soldier_F {
-        scope = 2;
+        scope = 0;
 		side = 1;
 		identityTypes[] = {"Head_NATO", "G_NATO_default"};
 		
@@ -70,7 +70,7 @@ class cfgVehicles
         hiddenSelectionsTextures[] = {"ST11_Uniforms\Textures\ST11_ACU_co.paa"};        
     };	
 	class ST11_3ColorDes : I_soldier_F {
-        scope = 2;
+        scope = 0;
 		side = 1;
 		identityTypes[] = {"Head_NATO", "G_NATO_default"};
 		
@@ -82,7 +82,7 @@ class cfgVehicles
         hiddenSelectionsTextures[] = {"ST11_Uniforms\Textures\ST11_3ColorDes_co.paa"};        
     };	
 	class ST11_6ColorDes : I_soldier_F {
-        scope = 2;
+        scope = 0;
 		side = 1;
 		identityTypes[] = {"Head_NATO", "G_NATO_default"};
 		
@@ -94,7 +94,7 @@ class cfgVehicles
         hiddenSelectionsTextures[] = {"ST11_Uniforms\Textures\ST11_6ColorDes_co.paa"};        
     };
 	class ST11_NWU : I_soldier_F {
-        scope = 2;
+        scope = 0;
 		side = 1;
 		identityTypes[] = {"Head_NATO", "G_NATO_default"};
 		
@@ -116,6 +116,51 @@ class cfgVehicles
 			"ST11_Uniforms\Textures\ST11_Kitbag_AOR1_CO.paa"
 		};
 		displayName="Kitbag (AOR1)";
+		scope=2;
+		maximumLoad=350;
+		passThrough=1;
+		mass=4;
+		};
+		class ST11_6ColorDes_Kitbag : Bag_Base
+		{
+		_generalMacro="ST11_6ColorDes_Kitbag";
+		picture="\A3\Weapons_F\ammoboxes\bags\data\ui\icon_B_C_Kitbag_rgr";
+		model="\A3\weapons_f\Ammoboxes\bags\Backpack_Fast";
+		hiddenSelectionsTextures[]=
+		{
+			"ST11_Uniforms\Textures\ST11_6ColorDes_kitbag_co.paa"
+		};
+		displayName="Kitbag (6 Color Desert)";
+		scope=2;
+		maximumLoad=350;
+		passThrough=1;
+		mass=4;
+		};
+		class ST11_3ColorDes_Kitbag : Bag_Base
+		{
+		_generalMacro="ST11_3ColorDes_Kitbag";
+		picture="\A3\Weapons_F\ammoboxes\bags\data\ui\icon_B_C_Kitbag_rgr";
+		model="\A3\weapons_f\Ammoboxes\bags\Backpack_Fast";
+		hiddenSelectionsTextures[]=
+		{
+			"ST11_Uniforms\Textures\ST11_3ColorDes_kitbag_co.paa"
+		};
+		displayName="Kitbag (3 Color Desert)";
+		scope=2;
+		maximumLoad=350;
+		passThrough=1;
+		mass=4;
+		};
+		class ST11_ACU_Kitbag : Bag_Base
+		{
+		_generalMacro="ST11_ACU_Kitbag";
+		picture="\A3\Weapons_F\ammoboxes\bags\data\ui\icon_B_C_Kitbag_rgr";
+		model="\A3\weapons_f\Ammoboxes\bags\Backpack_Fast";
+		hiddenSelectionsTextures[]=
+		{
+			"ST11_Uniforms\Textures\ST11_ACU_kitbag_co.paa"
+		};
+		displayName="Kitbag (3 Color Desert)";
 		scope=2;
 		maximumLoad=350;
 		passThrough=1;
