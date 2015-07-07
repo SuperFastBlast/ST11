@@ -45,7 +45,54 @@ class cfgVehicles
         hiddenSelections[] = {"Camo"};
         hiddenSelectionsTextures[] = {"ST11_Uniforms\Textures\ST11_AOR1_co.paa"};        
     };	
-	
+	class ST11_BDU : I_soldier_F {
+        scope = 2;
+		side = 1;
+		identityTypes[] = {"Head_NATO", "G_NATO_default"};
+		
+        displayName = "Uniform Test Soldier BDU";
+        uniformAccessories[] = {};
+        nakedUniform = "U_BasicBody"; //class for "naked" body
+        uniformClass = "ST11_BDU_Uniform"; //the uniform item
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"ST11_Uniforms\Textures\ST11_BDU_co.paa"};        
+    };	
+	class ST11_ACU : I_soldier_F {
+        scope = 2;
+		side = 1;
+		identityTypes[] = {"Head_NATO", "G_NATO_default"};
+		
+        displayName = "Uniform Test Soldier ACU";
+        uniformAccessories[] = {};
+        nakedUniform = "U_BasicBody"; //class for "naked" body
+        uniformClass = "ST11_ACU_Uniform"; //the uniform item
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"ST11_Uniforms\Textures\ST11_ACU_co.paa"};        
+    };	
+	class ST11_3ColorDes : I_soldier_F {
+        scope = 2;
+		side = 1;
+		identityTypes[] = {"Head_NATO", "G_NATO_default"};
+		
+        displayName = "Uniform Test Soldier 3 Color Desert";
+        uniformAccessories[] = {};
+        nakedUniform = "U_BasicBody"; //class for "naked" body
+        uniformClass = "ST11_3ColorDes_Uniform"; //the uniform item
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"ST11_Uniforms\Textures\ST11_3ColorDes_co.paa"};        
+    };	
+	class ST11_6ColorDes : I_soldier_F {
+        scope = 2;
+		side = 1;
+		identityTypes[] = {"Head_NATO", "G_NATO_default"};
+		
+        displayName = "Uniform Test Soldier 6 Color Desert";
+        uniformAccessories[] = {};
+        nakedUniform = "U_BasicBody"; //class for "naked" body
+        uniformClass = "ST11_6ColorDes_Uniform"; //the uniform item
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"ST11_Uniforms\Textures\ST11_6ColorDes_co.paa"};        
+    };
 	class ST11_NWU : I_soldier_F {
         scope = 2;
 		side = 1;
@@ -214,4 +261,61 @@ class cfgVehicles
             mass = 80; //how much it weights
         };
     };
+	
+	class ST11_BDU_Uniform : U_I_CombatUniform {
+        scope = 2;
+        displayName = "ST11 BDU";
+        picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
+        model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+        
+        class ItemInfo : UniformItem {
+            uniformModel = "-";
+            uniformClass = "ST11_BDU"; //would be same as our made soldier class
+            containerClass = "Supply20"; //how much it can carry
+            mass = 80; //how much it weights
+        };
+    };
+	
+	class ST11_ACU_Uniform : U_I_CombatUniform {
+        scope = 2;
+        displayName = "ST11 ACU";
+        picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
+        model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+        
+        class ItemInfo : UniformItem {
+            uniformModel = "-";
+            uniformClass = "ST11_ACU"; //would be same as our made soldier class
+            containerClass = "Supply20"; //how much it can carry
+            mass = 80; //how much it weights
+        };
+    };
+	
+	class ST11_3ColorDes_Uniform : U_I_CombatUniform {
+        scope = 2;
+        displayName = "ST11 3 Color Desert";
+        picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
+        model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+        
+        class ItemInfo : UniformItem {
+            uniformModel = "-";
+            uniformClass = "ST11_3ColorDes"; //would be same as our made soldier class
+            containerClass = "Supply20"; //how much it can carry
+            mass = 80; //how much it weights
+        };
+    };
+	
+	class ST11_6ColorDes_Uniform : U_I_CombatUniform {
+        scope = 2;
+        displayName = "ST11 6 Color Desert";
+        picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
+        model = "\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
+        
+        class ItemInfo : UniformItem {
+            uniformModel = "-";
+            uniformClass = "ST11_6ColorDes"; //would be same as our made soldier class
+            containerClass = "Supply20"; //how much it can carry
+            mass = 80; //how much it weights
+        };
+    };
+	
 };
